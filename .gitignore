@@ -29,3 +29,4 @@ chrome-user-data
 .firebaserc
 firebase.json
 .github
+package-lock.json
