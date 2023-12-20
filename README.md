@@ -6,7 +6,7 @@ Aquest repositori ofereix una base de React JS (react-create-app) per crear nous
 
 Dins del directori dels nostres projectes, podem fer el clonat amb la comanda següent:
 
-### `git clone https://github.com/smapboot/smap-react [nom-del-nostre-projecte]`
+### `git clone https://github.com/smapboot/smap-base [nom-del-nostre-projecte]`
 
 Un cop hem clonat el projecte des del GIT, executem la instal·lació de les dependencies:
 
