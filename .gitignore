@@ -30,3 +30,4 @@ chrome-user-data
 firebase.json
 .github
 package-lock.json
+.env
