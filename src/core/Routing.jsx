@@ -4,8 +4,8 @@ import {Spinner} from "react-bootstrap";
 import { MockListFake } from "../mocks/MockListFake";
 import { MockLoremParagrafs } from "../mocks/MockLoremParagrafs";
 
-// Banc de proves (provar diferents integracions de tercers)
-const BancDeProves = React.lazy(() => import("../bundles/laboratori/BancDeProves"))
+// Exemples
+const DataTableExample = React.lazy(() => import("../examples/DataTableExample"))
 
 // Layout WebApp
 const WebHeader = React.lazy(() => import("../components/layout/header/WebHeader"))
@@ -68,7 +68,9 @@ const Routing = () => {
             />}
           />
           <Route path="/user/*" name="User" element={<UserController/>}/>
-          <Route path="/laboratori" name="I+D" element={<BancDeProves/>}/>
+
+          {/*Examples*/}
+          <Route path="/examples/datatable" name="Exemple Datatable" element={<DataTableExample/>}/>
         </Routes>
       </Suspense>
     </>

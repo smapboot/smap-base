@@ -1,9 +1,8 @@
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
-import SmapTable from "../../components/ResultSetsUI/SmapTable/SmapTable";
-import Productes from "../../mocks/productes.json"
+import React, {useCallback, useEffect, useMemo, useState} from "react"
+import SmapTable from "../components/ResultSetsUI/SmapTable/SmapTable";
+import Productes from "../mocks/productes.json";
 
-const BancDeProves = () => {
-
+const DataTableExample = () => {
     const [selectedRows, setSelectedRows] = useState([]);
 
     useEffect(() => {
@@ -66,4 +65,4 @@ const BancDeProves = () => {
     )
 }
 
-export default BancDeProves;
+export default DataTableExample;
