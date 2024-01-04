@@ -1,0 +1,21 @@
+.fc-theme-standard{
+  background: #08c;
+  color: #1e1e1c;
+  margin: 10px auto;
+}
+.fc-view-harness-active{
+  background: #ffee;
+  margin: 10px 30px;
+}
+.fc-daygrid-event-harness{
+  cursor: pointer;
+}
+.fc-daygrid-event-harness a{
+  cursor: pointer;
+  display: block;
+  background: #08c;
+  color: #ffe;
+  padding-bottom: 2px;
+  border: 1px solid #08c;
+  border-radius: 3px;
+}

@@ -13,6 +13,10 @@ const paragrafs = [
     },
 ];
 
+export const getOneLorem = () => {
+    return paragrafs[0].content
+}
+
 export const MockLoremParagrafs = (
   <div>
     {
