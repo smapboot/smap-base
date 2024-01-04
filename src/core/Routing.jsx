@@ -3,9 +3,11 @@ import {Route, Routes} from "react-router-dom";
 import {Spinner} from "react-bootstrap";
 import { MockListFake } from "../mocks/MockListFake";
 import { MockLoremParagrafs } from "../mocks/MockLoremParagrafs";
+import {ListOfExamples} from "../examples/ListOfExamples";
 
 // Exemples
-const DataTableExample = React.lazy(() => import("../examples/DataTableExample"))
+const Examples = React.lazy(() => import("../examples/Examples"))
+const DataTableExample = React.lazy(() => import("../examples/datatable/DataTableExample"))
 
 // Layout WebApp
 const WebHeader = React.lazy(() => import("../components/layout/header/WebHeader"))
@@ -70,7 +72,20 @@ const Routing = () => {
           <Route path="/user/*" name="User" element={<UserController/>}/>
 
           {/*Examples*/}
-          <Route path="/examples/datatable" name="Exemple Datatable" element={<DataTableExample/>}/>
+          <Route exact path="/examples" element={
+            <WebApp
+                element={<Examples />}
+                columns={2}
+                content_sidebar_left={ListOfExamples}
+            />}
+          />
+          <Route path="/examples/datatable" element={
+            <WebApp
+                element={<DataTableExample />}
+                columns={2}
+                content_sidebar_left={ListOfExamples}
+            />}
+          />
         </Routes>
       </Suspense>
     </>

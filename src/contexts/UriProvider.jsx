@@ -19,7 +19,7 @@ const UriProvider = (props) => {
 
     useEffect(() => {
         let segments = []
-        let parts = location.pathname.split("/");
+        let parts = location.pathname.split("/").filter(Boolean);
         parts.map((part) => {
             if ( !_.isEmpty(part) ) {
                 segments.push(part)

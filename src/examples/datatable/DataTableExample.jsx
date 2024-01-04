@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useMemo, useState} from "react"
-import SmapTable from "../components/ResultSetsUI/SmapTable/SmapTable";
-import Productes from "../mocks/productes.json";
+import SmapTable from "../../components/ResultSetsUI/SmapTable/SmapTable";
+import Productes from "../../mocks/productes.json";
 
 const DataTableExample = () => {
     const [selectedRows, setSelectedRows] = useState([]);
