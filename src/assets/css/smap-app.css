@@ -18,3 +18,13 @@ code {
     padding: 3px 10px;
     margin: 0 auto;
 }
+
+.linkExtern {
+    padding: 2px 0 0 3px;
+    font: 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.linkExtern a {
+    color: maroon;
+    text-decoration: none;
+}

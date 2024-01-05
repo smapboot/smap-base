@@ -1,8 +1,10 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
+import caLocale from '@fullcalendar/core/locales/ca';
 import interactionPlugin from "@fullcalendar/interaction"
-import "./SmapCalendar.css"
+import "./calendar.css"
+import "./grids.css"
 import * as utils from "../../helpers/Utils"
 import {
     CButton,
@@ -15,13 +17,20 @@ import {
 
 const SmapCalendar = (props) => {
 
-    // Props
-    const {events} = props
-    utils.developmentLog("SmapCalendar > Props", props)
-
     // States
+    const [weekendVisible, isWeekendVisible] = useState(false)
     const [modalInfoVisible, showModal] = useState(false)
     const [currentInfo, setCurrentInfo] = useState({})
+    const [eventsList, setEventsList] = useState([])
+
+    useEffect(() => {
+        const initCalendar = (props) => {
+            const {events, showWeekend} = props
+            isWeekendVisible(showWeekend)
+            setEventsList(events)
+        }
+        initCalendar(props)
+    }, [])
 
     const handleDateClick = (arg) => {
         // alert(arg.dateStr)
@@ -48,11 +57,12 @@ const SmapCalendar = (props) => {
     return (
         <>
             <FullCalendar
-                locale={"ca"}
+                firstDay={1}
+                locale={caLocale}
                 plugins={[dayGridPlugin, interactionPlugin]}
                 initialView={"dayGridMonth"}
-                weekends={false}
-                events={events}
+                weekends={weekendVisible}
+                events={eventsList}
                 eventContent={renderEventContent}
                 dateClick={handleDateClick}
                 eventClick={handleEvent}

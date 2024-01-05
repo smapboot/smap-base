@@ -55,6 +55,7 @@ const FullCalendarExample = () => {
     return (
         <SmapCalendar
             events={getEvents()}
+            showWeekend={true}
         />
     )
 }
