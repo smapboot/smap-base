@@ -41,16 +41,25 @@ const defaultItems = [
     type: "link",
     visible: true
   },
+  {
+    label: "EXAMPLES",
+    href: "/examples",
+    type: "link",
+    visible: true
+  },
 ]
 
 const WebHeader = (props) => {
 
   const { itemsNavbar } = props
-  const {uriString,} = useUri()
+  const {uriString,controller, segments} = useUri()
 
   // Local
   const isLinkActive = (href) => {
-    return (uriString === href) ? "smapNavLink active" : "smapNavLink"
+    let parts = href.split("/").filter(Boolean)
+    return ( parts.length === 1 )
+        ? (controller === parts[0]) ? "smapNavLink active" : "smapNavLink"
+        : (uriString === href ) ? "smapNavLink active" : "smapNavLink"
   }
 
   const items = itemsNavbar || defaultItems;

@@ -128,6 +128,11 @@ export const dateLongFormatted = (date) => {
   let hora = date.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})
   return data + ' a les ' + hora
 }
+
+export const getTomorrow = () => {
+  return new Date(new Date().getTime() + 86400000)
+}
+
 export const deleteObjectFromArray = (key, value, array) => {
   if (existsObjectInArray(key, value, array)) {
     for (let i in array) {

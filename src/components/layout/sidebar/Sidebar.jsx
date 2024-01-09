@@ -12,7 +12,6 @@ const Sidebar = (props) => {
 
   return (
     <>
-      <h1>Sidebar in {orientation}</h1>
       {content}
     </>
   )
