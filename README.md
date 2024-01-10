@@ -122,6 +122,22 @@ src/pages/Home.jsx
 
 ![img.png](readme_images/home_exemple.png)
 
+## Components inclosos en aquest repositori
+
+En aquest repositori, s'inclouen alguns components d'exemple que poden ser utilitzats a qualsevol projecte i que, només requereixen d'un mínim de configuració, per tal de 
+adaptar-los als vostres interessos i projecte.
+
+###Llistat dels Components
+#####Datatable:
+Es tracta d'una taula HTML que permet diferents funcionalitats a nivell d'interfísie d'usuari:
+- Paginació
+- Ordenació de columnes
+- Filtrat de valors/continguts
+
+#####Fullcalendar:
+Un calendari tipus agenda que permet la gestió d'esdeveniments, cites i d'altres.
+
+#### Fí del README
 A partir d'aquí, la resta ja va per compte vostre.
 
 Feliç codificació ![img.gif](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/gifs/wave.gif)

@@ -4,6 +4,8 @@
   "private": true,
   "description": "El meu paquet bàsic per a la posta en marxa de nous projectes REACT JS",
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^40.2.0",
+    "@ckeditor/ckeditor5-react": "^6.2.0",
     "@coreui/coreui": "^4.2.6",
     "@coreui/icons": "^3.0.1",
     "@coreui/icons-react": "^2.2.1",

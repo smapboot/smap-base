@@ -11,6 +11,11 @@ const items = [
         href: "/examples/fullcalendar",
         extra: "https://fullcalendar.io/docs#toc"
     },
+    {
+        label: "Ckeditor",
+        href: "/examples/ckeditor",
+        extra: "https://ckeditor.com/docs/ckeditor5/latest/installation/integrations/react.html#quick-start"
+    },
 ];
 
 export const ListOfExamples = (

@@ -3,6 +3,13 @@ import "./WebFooter.css"
 import {CCol, CContainer, CFooter, CRow} from "@coreui/react";
 import CommonHelper from "../../../helpers/CommonHelper";
 
+const externLinks = [
+  {
+    label: "CKEditor5 Online Builder",
+    href: "https://ckeditor.com/ckeditor-5/online-builder/"
+  }
+]
+
 const WebFooter = () => {
   return (
     <CFooter className={"smapFooter"}>
@@ -13,6 +20,19 @@ const WebFooter = () => {
           </CCol>
           <CCol>
             <h6>Enllaços ràpids {CommonHelper.iconTargetBlank()}</h6>
+            <ul>
+              {
+                externLinks.map((link, i) => {
+                  return (
+                      <li key={i}>
+                        <a href={link.href} target={"_blank"}>
+                          {link.label}
+                        </a>
+                      </li>
+                  )
+                })
+              }
+            </ul>
           </CCol>
           <CCol>
             <h6>Wiki</h6>
