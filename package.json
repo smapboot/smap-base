@@ -1,7 +1,7 @@
 {
-  "name": "smap-react",
+  "name": "smap-base",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "description": "El meu paquet bàsic per a la posta en marxa de nous projectes REACT JS",
   "dependencies": {
     "@ckeditor/ckeditor5-basic-styles": "^40.2.0",
