@@ -28,3 +28,7 @@ code {
     color: maroon;
     text-decoration: none;
 }
+
+.ck-powered-by{
+    display: none !important;
+}
