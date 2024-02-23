@@ -1,0 +1,5 @@
+.ck-powered-by,
+.ck-placeholder,
+.smapEditorReadonly .ck-editor__top {
+    display: none !important;
+}

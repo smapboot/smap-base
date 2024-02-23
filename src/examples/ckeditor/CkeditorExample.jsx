@@ -1,34 +1,52 @@
-import React, {useState} from "react"
-import { CKEditor } from '@ckeditor/ckeditor5-react';
-import Classiceditor from '@ckeditor/ckeditor5-build-classic';
-
+import React from "react"
+import SmapEditor from "../../components/editor/SmapEditor";
+import {CRow} from "@coreui/react";
+import {ToolbarBasic, ToolbarFull, ToolbarMedium} from "../../components/editor/ToolbarsEditor";
 
 const CkeditorExample = () => {
-    // Logic here...
-    const [exemple, setExemple] = useState({content : "<p>Exemple d'inicialització del component Ckeditor</p>"})
 
-    const onCashange  = data => {
-        console.log( "Called" );
-        let content = data.getData()
-        console.log( "onCashange > data", content);
-        let newExemple = {...exemple}
-        newExemple["content"] = content
-        setExemple(newExemple)
-    }
+    const str = "Text inicial";
 
+    const exempleBasic = (
+        <SmapEditor
+            textInicial={str + " d'editor basic"}
+            mode={ToolbarBasic}
+        />
+    )
 
-    // Renderize
+    const exempleMedium = (
+        <SmapEditor
+            textInicial={str + " d'editor medium"}
+            mode={ToolbarMedium}
+            idioma={"en"}
+        />
+    )
+
+    const exempleFull = (
+        <SmapEditor
+            textInicial={str + " d'editor full"}
+            mode={ToolbarFull}
+            idioma={"es"}
+        />
+    )
+
+    // Renderitzat
     return (
         <>
-            <h2>Using the CKEditor&nbsp;5 context feature in React</h2>
-            <CKEditor
-                editor = { Classiceditor }
-                name={"summary"}
-                data={ exemple.content}
-                onChange = { ( event, editor ) => {
-                    onCashange( editor );
-                }}
-            />
+            <CRow className={"mb_30"}>
+                <h2>Ús del component CKEditor configuració: <b><i>basic</i></b></h2>
+                {exempleBasic}
+            </CRow>
+
+            <CRow className={"mb_30"}>
+                <h2>Ús del component CKEditor configuració: <b><i>medium</i></b></h2>
+                {exempleMedium}
+            </CRow>
+
+            <CRow className={"mb_30"}>
+                <h2>Ús del component CKEditor configuració: <b><i>full</i></b></h2>
+                {exempleFull}
+            </CRow>
         </>
     )
 }
