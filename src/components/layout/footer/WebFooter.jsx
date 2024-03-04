@@ -1,7 +1,7 @@
 import React from 'react'
 import "./WebFooter.css"
 import {CCol, CContainer, CFooter, CRow} from "@coreui/react";
-import CommonHelper from "../../../helpers/CommonHelper";
+import IconsHelper from "../../../helpers/IconsHelper";
 
 const externLinks = [
   {
@@ -19,7 +19,7 @@ const WebFooter = () => {
             <p>&nbsp;</p>
           </CCol>
           <CCol>
-            <h6>Enllaços ràpids {CommonHelper.iconTargetBlank()}</h6>
+            <h6>Enllaços ràpids {IconsHelper.iconTargetBlank()}</h6>
             <ul>
               {
                 externLinks.map((link, i) => {

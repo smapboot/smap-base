@@ -1,7 +1,7 @@
 import {faArrowUpRightFromSquare} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-const CommonHelper = {
+const IconsHelper = {
   iconTargetBlank: () => {
     return (
       <FontAwesomeIcon
@@ -11,4 +11,4 @@ const CommonHelper = {
   }
 }
 
-export default CommonHelper
+export default IconsHelper
