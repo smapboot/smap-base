@@ -9,6 +9,7 @@ import {ListOfExamples} from "../examples/ListOfExamples";
 const Examples = React.lazy(() => import("../examples/Examples"))
 const DataTableExample = React.lazy(() => import("../examples/datatable/DataTableExample"))
 const FullCalendarExample = React.lazy(() => import("../examples/calendar/FullCalendarExample"))
+const CkeditorExample = React.lazy(() => import("../examples/ckeditor/CkeditorExample"))
 
 // Layout WebApp
 const WebHeader = React.lazy(() => import("../components/layout/header/WebHeader"))
@@ -90,6 +91,13 @@ const Routing = () => {
           <Route path="/examples/fullcalendar" element={
             <WebApp
                 element={<FullCalendarExample />}
+                columns={2}
+                content_sidebar_left={ListOfExamples}
+            />}
+          />
+          <Route path="/examples/ckeditor" element={
+            <WebApp
+                element={<CkeditorExample />}
                 columns={2}
                 content_sidebar_left={ListOfExamples}
             />}
