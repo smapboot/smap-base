@@ -14,7 +14,7 @@ import "./WebHeader.css"
 import LogoNavBar from "../../../assets/images/logo_nav_bar.png"
 import {Image} from "react-bootstrap";
 
-const WebHeaderDropdown = React.lazy(() => import("./WebHeaderDropdown"))
+// const WebHeaderDropdown = React.lazy(() => import("./WebHeaderDropdown"))
 
 const defaultItems = [
   {
@@ -107,9 +107,9 @@ const WebHeader = (props) => {
             })
           }
         </CHeaderNav>
-        <CHeaderNav className="ms-3">
-          <WebHeaderDropdown/>
-        </CHeaderNav>
+        {/*<CHeaderNav className="ms-3">*/}
+        {/*  <WebHeaderDropdown/>*/}
+        {/*</CHeaderNav>*/}
       </CContainer>
     </CHeader>
   )

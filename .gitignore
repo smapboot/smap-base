@@ -31,3 +31,6 @@ firebase.json
 .github
 package-lock.json
 .env
+.env.local
+.env.test.local
+.env.production.local
