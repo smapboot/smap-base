@@ -4,6 +4,10 @@ import {auth} from "./firebaseCore";
 import _ from "lodash";
 
 const existsAuth = () => {
+  console.log("OAuth > existsAuth", {
+    objecte: auth,
+    bool: !_.isEmpty(auth)
+  });
   return !_.isEmpty(auth);
 }
 

@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {BrowserRouter} from 'react-router-dom';
 import './styles'
 import Routing from "./core/Routing";
-import UserProvider from "./contexts/UserProvider";
 import UriProvider from "./contexts/UriProvider";
 
 class App extends Component {
@@ -10,9 +9,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <UriProvider>
-          <UserProvider>
-            <Routing/>
-          </UserProvider>
+          <Routing/>
         </UriProvider>
       </BrowserRouter>
     )

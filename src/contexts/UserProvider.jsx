@@ -35,24 +35,33 @@ const UserProvider = (props) => {
     return store.getStorage(ConstantsHelper.KEYS_STORAGE.USER) || defaultUserData
   })
   const navigate = useNavigate()
+  // utils.developmentLog("UserProvider > useEffect _getUserDataFromStorage > user", user)
 
   // Controlem els canvis sobre l'estat de l'autenticació de l'usuari
   useEffect(() => {
-    if ( OAuth.existsAuth() ) {
+    utils.developmentLog("UserProvider > useEffect", {
+      "bool": !User.isAuthenticated,
+      "oauth": OAuth.existsAuth()
+    })
+    if ( OAuth.existsAuth() && !User.isAuthenticated  ) {
+      utils.developmentLog("UserProvider > useEffect provem d'iniciar la sessió")
       const _getUserDataFromStorage = () => {
         let user
         let data = store.getStorage(ConstantsHelper.KEYS_STORAGE.USER)
+        utils.developmentLog("UserProvider > useEffect > data", data)
         if (!_.isEmpty(data)) {
           user = data
+          utils.developmentLog("UserProvider > useEffect > accio > prenem l'user de localStorage", user)
         } else {
-          navigate("/user/login")
+          utils.developmentLog("UserProvider > useEffect > accio > redireccionar a user/login")
+          // navigate("/user/login")
         }
         return user
       }
 
       let user = _getUserDataFromStorage()
       user = user || {isAuthenticated: false}
-      // utils.developmentLog("UserProvider > useEffect _getUserDataFromStorage > user", user)
+      utils.developmentLog("UserProvider > useEffect _getUserDataFromStorage > user", user.isAuthenticated)
       setUser((previousUserData) => {
         return {
           ...previousUserData,
@@ -60,7 +69,7 @@ const UserProvider = (props) => {
         }
       })
     }
-  }, [User.isAuthenticated])
+  }, [])
 
   // Mirem d'iniciar sessió d'un usuari registrat amb mètode mail/password
   const initSession = async (email, password) => {
